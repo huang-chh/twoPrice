@@ -1,0 +1,26 @@
+##系统配置项
+server:
+  port: 80
+  context-path: /sell
+
+##数据库连接配置项，以及jpa
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.106:3306/sell?characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+#配置日志
+logging:
+  pattern:
+    console: "%d - %msg%n"
+    file: /var/log/sell.log
+
+wechat:
+  mpAppId: wxd235ce52563f5625
+  mpAppSecret: cb2d7cfca3141c43fc5f595644744c94
+
